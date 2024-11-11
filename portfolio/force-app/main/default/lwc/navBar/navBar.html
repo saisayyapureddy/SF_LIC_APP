@@ -1,0 +1,15 @@
+<template>
+    <div class={sidebarClass}>
+        <button class="toggle-btn" onclick={toggleSidebar}>{toggleIcon}</button>
+        <ul class="nav-list">
+                <li>
+                    <button class="text-button" onclick={AccountsHandler} data-action="account">My Accounts</button>
+                </li>
+                <li>
+                    <button class="text-button" onclick={documentsHandler} data-action="documents">My Documents</button>
+                </li>
+            
+        </ul>
+        
+    </div>
+</template>

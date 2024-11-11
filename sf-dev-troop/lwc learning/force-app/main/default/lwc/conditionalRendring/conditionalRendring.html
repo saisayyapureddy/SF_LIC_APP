@@ -1,0 +1,25 @@
+<template>
+    <lightning-card title="Conditional rendering">
+        <div class="slds-var-m-around_medium">
+            <lightning-button label="Conditional-Rendering" title="Conditional rendering" 
+             onclick={onCliked} class="slds-m-left_x-small">
+             </lightning-button>
+
+             <div>
+                <template if:true={isVisible}>
+                     <div>
+                        <h2>i am from conditional rendering true </h2>
+                     </div>
+                </template>
+
+                <template if:false={isVisible}>
+                    <div>
+                       <h2>i am from conditional rendering false </h2>
+                    </div>
+               </template>
+             </div>
+
+       </div>
+    </lightning-card>
+    
+</template>

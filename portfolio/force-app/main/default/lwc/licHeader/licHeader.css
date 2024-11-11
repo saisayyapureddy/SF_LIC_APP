@@ -1,0 +1,40 @@
+.header {
+    padding: 10px;
+    background-color: #34a8eb;
+    border-radius: 8px;
+    margin-bottom: 16px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.custom-btn {
+    display: flex;
+    gap: 10px;
+}
+
+h1 {
+    color: white;
+    text-align: start;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 19px;
+}
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.close-icon {
+    cursor: pointer;
+    color: #0070d2;
+    transition: transform 0.2s;
+}
+
+.close-icon:hover {
+    transform: scale(1.2);
+}

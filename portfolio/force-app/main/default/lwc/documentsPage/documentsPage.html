@@ -1,0 +1,40 @@
+<template>
+    <div class="slds-box slds-theme_shade slds-p-around_medium document-management-container">
+        <h1 class="slds-text-heading_large slds-m-bottom_small">Document Management</h1>
+        <p class="slds-text-body_regular slds-m-bottom_large">
+            Welcome to your Document Management section. Here, you can view, upload, and manage all your important documents related to your LIC policies. Keeping your documents organized is essential for quick access to policy details and claims.
+        </p>
+        <p class="slds-text-body_regular slds-m-bottom_large">
+            You can upload any relevant documents, such as policy copies, payment receipts, and identification proofs. Ensuring that these documents are readily available helps us serve you better when you need assistance or want to make claims.
+        </p>
+
+        <!-- File Upload Component -->
+        <div class="upload-container">
+            <lightning-file-upload
+                label="Upload Document"
+                name="fileUploader"
+                multiple
+                accept=".pdf,.doc,.docx,.txt"
+                onuploadfinished={handleUploadFinished}
+                class="upload-button"
+            ></lightning-file-upload>
+        </div>
+
+        <div class="slds-var-m-around_medium download-section">
+            <p class="slds-text-heading_small slds-var-m-bottom_small">
+                Click below to download important documents related to your account
+            </p>
+            <div class="download-buttons">
+                <!-- Styled anchor tag for Plan Info document -->
+                <a href={url} download class="slds-button slds-button_brand slds-m-right_small">
+                    Plan Info Document
+                </a>
+
+                <!-- Styled anchor tag for Tax Benefit document -->
+                <a href={jsBook} download class="slds-button slds-button_neutral">
+                    Tax Benefit Document
+                </a>
+            </div>
+        </div>
+    </div>
+</template>

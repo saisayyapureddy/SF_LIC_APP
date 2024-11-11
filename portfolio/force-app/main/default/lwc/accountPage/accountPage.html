@@ -1,0 +1,31 @@
+<template>
+    <lightning-card title="Account Information" icon-name="custom:custom14">
+        <div class="slds-var-m-around_medium account-content">
+            <p class="slds-text-body_regular">
+                Welcome to your LIC Account page. Here, you can find all the essential details related to your insurance policies. Understanding your account information is crucial for managing your policies effectively and ensuring you are always informed about your coverage.
+            </p>
+            <p class="slds-text-body_regular">
+                Your account information includes the type of policies you hold, their current status, and other relevant details. Keeping track of these aspects not only helps you stay organized but also empowers you to make informed decisions regarding your insurance needs.
+            </p>
+            <template if:true={accountInfo}>
+                <template for:each={accountInfo} for:item="policy">
+                    <div key={policy.Id} class="slds-box slds-box_xx-small slds-m-bottom_small slds-p-around_small">
+                        <h2 class="slds-text-heading_medium slds-m-bottom_small">{policy.Name}</h2>
+                        <hr class="slds-m-bottom_small">
+                        <div class="slds-grid slds-grid_vertical-align-center">
+                            <div class="slds-col slds-size_1-of-2">
+                                <p><strong>Account Type:</strong> {policy.AccountType__c}</p>
+                            </div>
+                            <div class="slds-col slds-size_1-of-2">
+                                <p><strong>Account Status:</strong> {policy.AccountStatus__c}</p>
+                            </div>
+                        </div>
+                    </div>
+                </template>
+            </template>
+            <template if:false={accountInfo}>
+                <p class="slds-text-body_regular slds-text-color_error">No account information available.</p>
+            </template>
+        </div>
+    </lightning-card>
+</template>

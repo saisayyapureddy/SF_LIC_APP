@@ -1,0 +1,43 @@
+/* Full page background */
+.login-background {
+    background-image: url('https://img.freepik.com/free-vector/gradient-technological-background_23-2148884155.jpg?t=st=1730201592~exp=1730205192~hmac=353f4f80dd883cf866db7c8396ca2694ed09e55644d138da2638ae19105197ca&w=826'); /* Add your background image URL */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Login container styling */
+.login-container {
+    width: 400px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    
+}
+
+/* Input and button styling */
+.input-group {
+    margin: 10px;
+    padding: 10px;
+}
+.login-button {
+    width: 100%;
+    margin-top: 20px;
+    margin: 10px;
+    padding: 10px;
+}
+
+/* Error message styling */
+.error {
+    color: red;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+}
+.button-group{
+    text-align: center;
+}

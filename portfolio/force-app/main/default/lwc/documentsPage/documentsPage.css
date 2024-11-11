@@ -1,0 +1,34 @@
+.document-management-container {
+    max-width: 800px; /* Set a maximum width for better layout */
+    margin: auto; /* Center the container */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for emphasis */
+    background-color: #f9f9f9; /* Light background for contrast */
+}
+
+.upload-container {
+    margin-bottom: 2rem; /* Add some space below the upload section */
+    text-align: center; /* Center the upload component */
+}
+
+.download-section {
+    text-align: center; /* Center the download section */
+    margin-top: 2rem; /* Add some space above */
+}
+
+.download-buttons {
+    display: inline-flex; /* Display buttons inline with some spacing */
+    gap: 1rem; /* Space between buttons */
+}
+
+.slds-button {
+    transition: background-color 0.3s ease; /* Add transition for hover effect */
+}
+
+.slds-button:hover {
+    background-color: #005fb2; /* Darken button on hover for feedback */
+}
+
+.slds-button_brand:hover {
+    background-color: #003d80; /* Darken brand button on hover */
+}

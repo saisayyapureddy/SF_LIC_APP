@@ -1,0 +1,47 @@
+<template>
+    <lightning-card title="My Personal Information" icon-name="custom:custom14">
+        <div class="slds-var-m-around_medium person-content">
+            <p class="slds-text-body_regular">
+                Welcome to your Personal Information section. Here, you can review and manage all the details related to your profile. Keeping your personal information up-to-date is essential for ensuring effective communication and personalized service from LIC.
+            </p>
+            <p class="slds-text-body_regular">
+                This section provides an overview of your contact details, including your email and phone number, as well as important information related to your insurance policy. Regularly updating this information helps us serve you better and ensures that you receive important updates regarding your account.
+            </p>
+            <template if:true={personInfo}>
+                <template for:each={personInfo} for:item="person">
+                    <div key={person.Id} class="slds-box slds-box_xx-small slds-m-bottom_small slds-p-around_small">
+                        <h2 class="slds-text-heading_medium slds-m-bottom_small">{person.Full_Name__c}</h2>
+                        <hr class="slds-m-bottom_small">
+                        <div class="slds-grid slds-grid_vertical-align-center">
+                            <div class="slds-col slds-size_1-of-2">
+                                <p><strong>Personal Email:</strong> {person.Email_Address__c}</p>
+                            </div>
+                            <div class="slds-col slds-size_1-of-2">
+                                <p><strong>Phone:</strong> {person.Phone_Number__c}</p>
+                            </div>
+                        </div>
+                        <div class="slds-grid slds-grid_vertical-align-center slds-m-top_small">
+                            <div class="slds-col slds-size_1-of-2">
+                                <p><strong>Gender:</strong> {person.Gender__c}</p>
+                            </div>
+                            <div class="slds-col slds-size_1-of-2">
+                                <p><strong>Policy Type:</strong> {person.Policy_Type__c}</p> <!-- Example additional field -->
+                            </div>
+                        </div>
+                        <div class="slds-grid slds-grid_vertical-align-center slds-m-top_small">
+                            <div class="slds-col slds-size_1-of-2">
+                                <p><strong>Policy Start Date:</strong> {person.Policy_Start_Date__c}</p>
+                            </div>
+                            <div class="slds-col slds-size_1-of-2">
+                                <p><strong>Policy Number:</strong> {person.Policy_Number__c}</p> <!-- Example additional field -->
+                            </div>
+                        </div>
+                    </div>
+                </template>
+            </template>
+            <template if:false={personInfo}>
+                <p class="slds-text-body_regular slds-text-color_error">No personal information available.</p>
+            </template>
+        </div>
+    </lightning-card>
+</template>

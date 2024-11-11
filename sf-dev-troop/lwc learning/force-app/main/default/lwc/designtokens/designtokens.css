@@ -1,0 +1,17 @@
+h1{
+    color: var(--lwc-brandAccessible);
+   background-color: var(--lwc-colorBackgroundAlt);
+}
+.wrapper{
+    width: 85%;
+    color: #459889;
+}
+
+.skills{
+    
+    background-color: var(--lwc-brandAccessible);
+    color: #fff;
+   padding-top: 10px;
+   padding-bottom: 10px;
+   text-align: right;
+}

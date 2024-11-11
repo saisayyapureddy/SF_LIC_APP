@@ -1,0 +1,43 @@
+<aura:component implements="flexipage:availableForAllPageTypes,force:appHostable,lightning:isUrlAddressable">
+    <aura:attribute name="selectedAction" type="String" default="account" />
+    <aura:attribute name="navService" type="Object" />
+
+    <lightning:navigation aura:id="navService" />
+
+    <aura:handler name="init" value="{!this}" action="{!c.handleInit}" />
+
+    <lightning:layout class="slds-grid slds-wrap main-layout">
+        <!-- Sidebar with Vertical Buttons -->
+        <lightning:layoutItem size="3" class="sidebar-container">
+            <div class="sidebar-header">
+                <lightning:icon iconName="standard:home" alternativeText="Home" size="small" onclick="{!c.handleHomeIconClick}"/>
+                <span class="sidebar-title">Home</span>
+            </div>
+            <div class="button-group">
+                <lightning:button label="Account Details" onclick="{!c.handleNavigation}" value="account" class="menu-button"/>
+                <lightning:button label="Payment Details" onclick="{!c.handleNavigation}" value="payment" class="menu-button"/>
+                <lightning:button label="Personal Information" onclick="{!c.handleNavigation}" value="personal" class="menu-button"/>
+                <lightning:button label="Documents" onclick="{!c.handleNavigation}" value="documents" class="menu-button"/>
+            </div>
+        </lightning:layoutItem>
+
+        <!-- Main Content Area -->
+        <lightning:layoutItem size="9" class="content-container">
+            <div class="custom-buttons-container slds-text-align_right slds-p-horizontal_medium">   
+                <lightning:button variant="brand" label="Logout" onclick="{!c.logoutHandler}" class="slds-m-left_x-small slds-m-around-small"></lightning:button>
+            </div>
+            <aura:if isTrue="{!v.selectedAction == 'account'}">
+                <c:accountPage />
+            </aura:if>
+            <aura:if isTrue="{!v.selectedAction == 'payment'}">
+                <c:paymentPage />
+            </aura:if>
+            <aura:if isTrue="{!v.selectedAction == 'personal'}">
+                <c:personalInformation />
+            </aura:if>
+            <aura:if isTrue="{!v.selectedAction == 'documents'}">
+                <c:documentsPage />
+            </aura:if>
+        </lightning:layoutItem>
+    </lightning:layout>
+</aura:component>

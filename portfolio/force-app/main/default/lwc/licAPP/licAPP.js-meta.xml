@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>62.0</apiVersion>
+    <isExposed>true</isExposed>
+    <masterLabel>LIC APP</masterLabel>
+    <targets>
+    
+            <target>lightning__AppPage</target>     <!-- Lightning App Page -->
+            <target>lightning__RecordPage</target>  <!-- Lightning Record Page -->
+            <target>lightning__HomePage</target>    <!-- Lightning Home Page -->
+            <target>lightning__Tab</target>         <!-- Custom Tab -->  <!-- Direct URL Access -->
+            <target>lightning__FlowScreen</target>  <!-- Lightning Flow Screen -->
+        
+    </targets>
+</LightningComponentBundle>

@@ -1,0 +1,30 @@
+<template>
+    <lightning-card class="full-width-card">
+        <div class="slds-var-m-around_medium">
+
+            <div class="main-layout">
+                <!-- Fixed Sidebar -->
+                <c-nav-bar onnavigate={handleNavigation} class="sidebar"></c-nav-bar>
+
+                <!-- Content Area -->
+                <div class="content-area">
+                    <div class="main-content">
+                        <!-- Header at the top -->
+                        <div class="header-container">
+                            <img src={LOGO} alt="LIC Logo" class="log" />
+                            <c-lic-header></c-lic-header>
+                        </div>
+                        <!-- Main content section below the header -->
+                        <div class="content-section">
+                            <c-main-content onnavigate={handleNavigation}></c-main-content>
+                        </div>
+                        <!-- Footer positioned at the bottom -->
+                        <div class="footer">
+                            <c-footer-component></c-footer-component>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,19 @@
+<template>
+    <lightning-card>
+        <div class="slds-m-around_medium slds-p-around_medium">
+            <div>
+                <div><strong>What is your  name?</strong></div>
+                 <div><slot name="first"></slot></div>
+                 <div><strong>What is your Age?</strong></div>
+                <div><slot name="second" ></slot></div>
+                <footer class="slds-card__footer slds-hide">
+                    <slot name="footer" onslotchane={change}></slot>
+
+                </footer>            
+            </div>
+
+        </div>
+
+    </lightning-card>
+    
+</template>

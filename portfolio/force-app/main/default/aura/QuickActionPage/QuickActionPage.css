@@ -1,0 +1,52 @@
+.THIS .main-layout {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.THIS .sidebar-container {
+    background-color: #2c3e50;
+    color: white;
+    padding: 10px;
+    min-height: 100vh;
+}
+
+.THIS .sidebar-header {
+    display: flex;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.THIS .sidebar-title {
+    margin-left: 8px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.THIS .button-group {
+    display: flex;
+    flex-direction: column; /* Arrange buttons vertically */
+    gap: 10px; /* Space between buttons */
+}
+
+.THIS .menu-button {
+    width: 100%; /* Full-width button */
+    background-color: #34495e;
+    color: white;
+    border-radius: 6px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    text-align: left; /* Align text to the left */
+}
+
+.THIS .content-container {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #f1f2f6;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    min-height: 100vh;
+}
+.THIS.custom-button{
+    text-align: right;
+}

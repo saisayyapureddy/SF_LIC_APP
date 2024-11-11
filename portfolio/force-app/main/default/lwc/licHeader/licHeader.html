@@ -1,0 +1,53 @@
+<template>
+    <!-- Header Section with Background -->
+    <div class="header">
+        <div class="container">
+            <h1>Your LIC Account</h1>
+            <div class="custom-btn">
+                <lightning-button variant="brand" label="Profile" onclick={profileHandler}></lightning-button>
+                <lightning-button variant="brand" label="Logout" onclick={logoutHandler}></lightning-button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Section -->
+    <template if:true={showModal}>
+        <section role="dialog" tabindex="-1" aria-modal="true" aria-labelledby="modal-heading-01" class="slds-modal slds-fade-in-open slds-modal_medium">
+            <div class="slds-modal__container custom-modal">
+                
+                <!-- Modal Header with Close Icon -->
+                <div class="slds-modal__header modal-header">
+                    <h1 id="modal-heading-01" class="slds-modal__title slds-hyphenate">Person Information</h1>
+                    <lightning-icon 
+                        icon-name="utility:close" 
+                        alternative-text="Close" 
+                        title="Close" 
+                        size="small" 
+                        class="close-icon" 
+                        onclick={closeModal}>
+                    </lightning-icon>
+                </div>
+
+                <!-- Modal Content with Person Info -->
+                <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                    <p><strong>Name:</strong> {personInfo.Full_Name__c}</p>
+                    <p><strong>Email:</strong> {personInfo.Email_Address__c}</p>
+                    <p><strong>Phone:</strong> {personInfo.Phone_Number__c}</p>
+                    <p><strong>Gender:</strong>{personInfo.Gender__c}</p>
+                    <p><strong>policy Type:</strong>{personInfo.Policy_Type__c}</p>
+                    <p><strong>Policy Number:</strong>{personInfo.Policy_Number__c}</p>
+                    <p><strong>policy start Date:</strong>{personInfo.Policy_Start_Date__c}</p>
+
+                </div>
+
+                <!-- Modal Footer with Close Button -->
+                <div class="slds-modal__footer">
+                    <lightning-button variant="neutral" label="Close" onclick={closeModal}></lightning-button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modal Background -->
+        <div class="slds-backdrop slds-backdrop_open" role="presentation"></div>
+    </template>
+</template>

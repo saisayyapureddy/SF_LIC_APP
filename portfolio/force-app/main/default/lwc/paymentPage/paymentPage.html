@@ -1,0 +1,36 @@
+<template>
+    <lightning-card title="Payment Settings" icon-name="custom:custom14">
+        <div class="slds-var-m-around_medium payment-content">
+            <p class="slds-text-body_regular">
+                Welcome to your Payment Settings page. Here, you can view and manage all your payment-related information associated with your LIC account. Understanding your payment details is essential for ensuring that your policies remain active and that your coverage is uninterrupted.
+            </p>
+            <p class="slds-text-body_regular">
+                This section provides you with a comprehensive overview of your payment methods, statuses, and related information. By keeping track of your payment history, you can ensure timely payments and avoid any lapses in your insurance coverage.
+            </p>
+            <template if:true={payments}>
+                <template for:each={payments} for:item="payment">
+                    <div key={payment.Id} class="slds-box slds-box_xx-small slds-m-bottom_small slds-p-around_small">
+                        <h2 class="slds-text-heading_medium slds-m-bottom_small">Payment Mode: {payment.Payment_Method__c}</h2>
+                        <hr class="slds-m-bottom_small">
+                        <div class="slds-grid slds-grid_vertical-align-center">
+                            <div class="slds-col slds-size_1-of-2">
+                                <p><strong>Payment Date:</strong> {payment.Payment_Date_Time__c}</p>
+                            </div>
+                            <div class="slds-col slds-size_1-of-2">
+                                <p><strong>Payment Status:</strong> {payment.Payment_Status__c}</p>
+                            </div>
+                        </div>
+                        <div class="slds-grid slds-grid_vertical-align-center slds-m-top_small">
+                            <div class="slds-col slds-size_1-of-1">
+                                <p><strong>Payment Address:</strong> {payment.Payment_Address__c}</p>
+                            </div>
+                        </div>
+                    </div>
+                </template>
+            </template>
+            <template if:false={payments}>
+                <p class="slds-text-body_regular slds-text-color_error">No payment information available.</p>
+            </template>
+        </div>
+    </lightning-card>
+</template>

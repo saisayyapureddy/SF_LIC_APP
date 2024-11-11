@@ -1,0 +1,22 @@
+<template>
+    <lightning-card title="Child to parent communication">
+        <div class="slds-var-m-around_large">
+            <lightning-button label="Show" onclick={showChild}></lightning-button>
+             <h2>{msg}</h2>
+            <template if:true={showChilCmp}>
+
+                <!-- accessing child component event close and we add on prefix so we can call one method in parent component 
+                and we can do what ever we want  -->
+                <div onclick={divHandlerCalled}>
+                    <c-c2c-model-component onclose={hideChild}></c-c2c-model-component>
+
+                </div>
+                
+
+
+            </template>
+
+        </div>
+    </lightning-card>
+
+</template>

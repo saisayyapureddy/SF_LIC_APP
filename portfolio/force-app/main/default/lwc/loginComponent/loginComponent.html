@@ -1,0 +1,42 @@
+<template>
+    <!-- Background and Container Styling -->
+    <div class="login-background">
+        <div class="login-container">
+            <lightning-card title="LIC Login" icon-name="custom:custom14">
+                <!-- Input Fields with Icons -->
+                <div class="input-group">
+                    <lightning-input 
+                        label="Username" 
+                        value={username} 
+                        onchange={handleInputChange} 
+                        data-id="username" 
+                        icon-name="utility:user"
+                        class="input-field">
+                    </lightning-input>
+                </div>
+
+                <div class="input-group">
+                    <lightning-input 
+                        type="password" 
+                        label="Password" 
+                        value={password} 
+                        onchange={handleInputChange} 
+                        data-id="password" 
+                        icon-name="utility:lock"
+                        class="input-field">
+                    </lightning-input>
+                </div>
+
+                <!-- Login Button -->
+                <div class="button-group">
+                    <lightning-button label="Login" variant="brand" onclick={login} class="login-button"></lightning-button>
+                </div>
+
+                <!-- Error Message -->
+                <template if:true={showError}>
+                    <p class="error">{errorMsg}</p>
+                </template>
+            </lightning-card>
+        </div>
+    </div>
+</template>

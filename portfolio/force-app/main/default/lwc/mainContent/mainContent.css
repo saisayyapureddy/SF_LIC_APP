@@ -1,0 +1,39 @@
+.content {
+    display: flex;
+    justify-content: space-between; /* Space between account-info and quick-actions */
+    padding: 20px;
+    margin: 10px; /* Remove any margin if necessary */
+}
+
+.account-info {
+    flex: 3; /* Flex-grow to take available space */
+    border: 2px solid #bdc3c7;
+    padding: 20px;
+    border-radius: 8px; /* Optional: add border radius for a softer look */
+    background-color: #ffffff; /* Set background color to differentiate from the quick actions */
+    min-width: 200px; /* Set a minimum height for the account info box */
+    min-height: 150px;
+}
+
+.quick-actions {
+    flex: 5 ; /* More space for quick actions */
+    justify-content: space-between;
+    text-align: center;
+    border: 1.5px solid #bdc3c7;
+    padding: 10px;
+    border-radius: 8px; /* Optional: add border radius for consistency */
+    background-color: #f9f9f9; /* Different background color for contrast */
+    min-width: 300px; /* Set a minimum height for the quick actions box */
+    min-height: 150px;
+}
+
+.quick-actions button {
+    margin: 10px; /* Space between buttons */
+    padding: 10px;
+}
+
+.details-btn {
+    display: flex;
+    justify-content: flex-end; /* Align button to the right */
+    border-radius: 8px; /* Consistent border radius */
+}

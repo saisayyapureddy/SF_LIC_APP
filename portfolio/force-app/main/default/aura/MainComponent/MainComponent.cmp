@@ -1,0 +1,14 @@
+<aura:component >
+    <lightning:button 
+        label="Open Account Details" 
+        onclick="{!c.openNewTab}" 
+        class="slds-m-around_medium" />
+    <lightning:button 
+        label="Open Payment Details" 
+        onclick="{!c.openNewTab}" 
+        class="slds-m-around_medium" />
+    <lightning:button 
+        label="Open Documents" 
+        onclick="{!c.openNewTab}" 
+        class="slds-m-around_medium" />
+</aura:component>

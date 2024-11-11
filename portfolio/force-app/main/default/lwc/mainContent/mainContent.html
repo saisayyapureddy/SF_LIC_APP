@@ -1,0 +1,19 @@
+<template>
+    <div class="content">
+        <div class="account-info">
+            <template if:true={accountInfo}>
+                <template for:each={accountInfo} for:item="account">
+                    <div key={account.Id}>
+                        <h1>{account.Name}</h1>
+                    </div>
+                </template>
+            </template>
+            <lightning-button label="View Details" data-action="account" onclick={handleButtonClick} class="details-btn slds-var-p-around_medium slds-var-m-around_medium "></lightning-button>
+        </div>
+        <div class="quick-actions">
+            <lightning-button label="Account Details" data-action="account" onclick={handleButtonClick} class="slds-var-p-around_medium slds-var-m-around_medium "></lightning-button>
+            <lightning-button label="Payment Details" data-action="payment" onclick={handleButtonClick} ></lightning-button>
+            <lightning-button label="Documents" data-action="documents" onclick={handleButtonClick}></lightning-button>
+        </div>
+    </div>
+</template>

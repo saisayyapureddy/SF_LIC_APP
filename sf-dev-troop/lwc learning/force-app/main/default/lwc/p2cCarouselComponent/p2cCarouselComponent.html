@@ -1,0 +1,20 @@
+<template>
+
+    <lightning-card>
+
+
+        <lightning-carousel disable-auto-scroll>
+            <template for:each={carosol} for:item="carl">
+                <lightning-carousel-image
+                    key={carl.id} 
+                    src={carl.src}
+                    header={carl.header}
+                    description={carl.description}>
+                </lightning-carousel-image>
+            </template>
+        </lightning-carousel>
+
+    </lightning-card>
+    
+
+</template>

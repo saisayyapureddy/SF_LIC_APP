@@ -1,0 +1,35 @@
+.custom_footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    border-top: 2px solid #ddd;
+    text-align: center;
+}
+
+.fcontent h1 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #f9a825;
+    margin: 0;
+}
+
+.fcontent p {
+    color: #bbb;
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.fcontent p:hover {
+    color: #f9a825;
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+.fcontent a {
+    color: #f9a825;
+    text-decoration: none;
+}
+
+.fcontent a:hover {
+    color: white;
+}
